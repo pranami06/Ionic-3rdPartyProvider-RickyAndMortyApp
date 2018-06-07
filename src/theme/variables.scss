@@ -38,8 +38,27 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  title: (
+    base: 		#20b2aa ,
+    contrast: 			#eedd82
+  ),
+  button: (
+    base: 			#48d1cc,
+    contrast: 			#ffff00
+  ),
+  text: 	#00868b,
+  background:(
+    base: 			#00f5ff,
+    contrast: 			#ffff00
+  ),
+  titleBackground: (
+    base: #20b2aa,
+    contrast: #ffff00
+  )
 );
+
+$color: #00868b;
 
 
 // App iOS Variables

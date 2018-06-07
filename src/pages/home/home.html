@@ -1,14 +1,42 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar text-center color="title">
     <ion-title>
-      Ionic Blank
+      Ricky & Morty App
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <!-- Introductory header -->
+  <ion-card class="animated fadeIn fadeInUp">
+    <ion-card-title text-center color="text">
+      <strong>Welcome to Ricky And Morty App!!</strong>
+    </ion-card-title>
+    <ion-card-content>
+    <p class="text">The Ricky And Morty is a television series which follows the misadventures of cynical mad scientist Rick Sanchez and his fretful, easily influenced grandson Morty Smith, who split their time between domestic life and interdimensional adventures.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Choose parameter -->
+  <ion-grid>
+    <ion-row justify-content-start>
+      <ion-col>
+        <ion-item>
+          <ion-label color="text">Choose Info About </ion-label>
+          <ion-select [(ngModel)]="param">
+            <ion-option value="character" [selected]="true"> Character</ion-option>
+            <ion-option value="location"> Location</ion-option>
+            <ion-option value="episode"> Episode</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center>
+      <ion-col col-10 col-sm>
+        <button ion-button color="button" (click)="getDataBasedOnParameter(param)">Get Data</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
